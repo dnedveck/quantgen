@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>Quant Gen Reader</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+<!-- MathJax scripts -->
+<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+</head>
+
+<body>
+<h1>Quant Gen Reader</h1>
+
+<h2>Chapter 3 </h2>
+
+<h3>Dispersive process</h3>
+
+<p>There are two ways of looking at the dispersive process, either look at it like a sampling process and consider it in terms of sampling variance, or think of it like an inbreeding process and describe it in terms of genotypic changes resultant from mating individuals.</p>
+
+<p>The dispersive process can be broken down into four parts, Falconer mentions these as the four <em>consequences</em>. </p>
+
+<h4>Random Drift</h4>
+
+<p>This is also known plainly as drift. This is the random changes in gene frequency in a population from generation to generation. </p>
+
+<h4>Differentiation between sub-populations</h4>
+
+<p>Subpopulations differentiate from each other by the process of drift occuring independently in the subpops. Natural pops are broken up into subpops because no large pop is truly randomly mating within itself.</p>
+
+<h4>Uniformity within sub-populations</h4>
+
+<p>As generations occur, genetic variation in subpops becomes more and more reduced, as the individuals become more genetically similar. <em>I don&#39;t really understand how this is a consequence of the dispersive process, Falconer goes on to mention something about inbred lines being used in laboratory</em></p>
+
+<h4>Increased Homozygosity</h4>
+
+<p>Homozygotes increase in frequency. Since most deleterious alleles are recessive, the accumulation of recessive homozygotes is the genetic basis of reduced vigor and fitness that comes with inbreeding.</p>
+
+<h3>Sampling</h3>
+
+<h4>Variance of Gene Frequency</h4>
+
+<p>\( q_0 \) is the gene frequency of one allele in the base population. Forming lines from te base population is like a sampling problem, with each individual of the base pop having N genes, and forming 2N gametes which are then sampled at random to produce the next generation. The gene frequencies will then be an average of the base populaiton, i.e. \( q \) will be \( q_0 \).  The averages will be distributed about the base pop means with a variance of \( p_0q_0/2N \), which is the variance of \( q_1 \), the gene frequency in different lines after one generation. </p>
+
+<p>Variance of gene frequency from going from base to 1st pop is:
+\[  
+\sigma_{p_0}^2 = \frac{p_0q_0}{2N}
+ \]</p>
+
+<p>This can then be generalized to the variance of gene frequency among the lines at any given generation \( t \) is:
+\[ 
+\sigma_p^2 = p_0q_0 \left[1 - \left(1 - \frac{1}{2N}  \right)^2 \right]
+ \]</p>
+
+<h3>Inbreeding</h3>
+
+<p><strong>IBD - Identity By Descent</strong> One of the effect of a common ancestor is that that indivudals could carry replicates of a gene from the common ancestor. When they mate, the offspring has the potential to acquire both replicates, becoming homozygous for this gene from the common ancestor. This type of homozygote is one of a &ldquo;origin of replication&rdquo;, two genes arising from the replication of one ancestral gene. This is called <em>identical by descent</em>. </p>
+
+<p><strong>coefficient of inbreeding</strong> \( F \), the probability that two genes at any locus in an individual are identical by descent. If parents are mating at random, then this becomes the probability that any two gametes taken at random from the parent generation carry identical alleles at any given locus.</p>
+
+<p>The coefficient of inbreeding in successive generations can be calculated by:
+\[ 
+F_t = \frac{1}{2N} + \left( 1 - \frac{1}{2N}  \right)F_{t-1}
+ \]</p>
+
+<p>The change in inbreeding from generation to generation is:
+\[ 
+\Delta F = \frac{1}{2N}
+ \]</p>
+
+<p>It can also be expressed as:
+\[ 
+\Delta F = \frac{F_t - F_{t-1}}{1 - F_{t-1}}
+ \]</p>
+
+<p>There is also the panmictic index, \( P \), where \( P = 1-F \). </p>
+
+<p>The inbreeding coefficient of any generation \( t \), is given by 
+\[ 
+F_t = 1 - (1 - \Delta F)^t \\
+F_t = 1 - (1- \frac{1}{2N})^t
+ \]</p>
+
+<h3>Variance of gene frequency</h3>
+
+<p>Variance of gene frequency using the inbreeding coefficient:
+\[ 
+\sigma^2_q = p_0 q_0 F_t
+ \]</p>
+
+<h2>Chapter 5 - Pedigreed Population and Close Inbreeding</h2>
+
+<h2>Chapter 7 - Values and Means</h2>
+
+<p>Initially, we need to think about the genotype value. If we take genotypes and put them on a scale, \( A_1A_1 \) will be at \( +a \), \( A_1A_2 \) will be at \( d \), and \( A_2A_2 \) will be \( -a \). To find these values, \( a = (A_1A_{1value} - A_2A_{2value})/2 \), the midpoint is \( A_1A_{1value} - a \) and \( d = A_1A_{2value}-midpoint \)</p>
+
+<p>We can determine effects of dominance by looking at the value of \( d \). If \( d=0 \), then there is no dominance. If \( d>0 \), then \( A_1 \) is dominant, if \( d<0 \), then \( A_2 \) is dominant. If \( d=\pm a \), then there is complete dominance of either allele. Overdominance is when \( d \) is greater than \( \pm a \). Another way to look at dominance is \( d/a \).</p>
+
+<h3>Population Mean</h3>
+
+<p>The mean value of the population is acquired by multiplying the value of each of the genotypes by their frequency, and summing over the three genotypes:
+\[ 
+M = a(p-q) + 2 dpq
+ \]</p>
+
+<h4>Average Effect</h4>
+
+<p>Average effects are the properties of genes and populations, the genes and the gene frequencies. The average effect of a particular gene/allele is the mean deviation from the population mean of individuals that recieved that gene from one parent, and the other gene coming from another parent at random from the population. Another way to think about this, is to take a number of gametes with \( A_1 \) pair with other gametes chosen at random from the population; then the mean of these genotypes differs from the population mean by an amount, \( \alpha_1 \), the average effect of allele \( A_1 \). </p>
+
+<p>Average effect of \( A_1 \) is called \( \alpha_1 \):
+\[  \alpha_1 = q[a+d(q-p) ]  \]</p>
+
+<p>The average effect of \( A_2 \) is \( \alpha_2 \):
+\[ \alpha_2 = -p[a + d(q-p) ]  \] </p>
+
+<p>When we are only considering two alleles, we can then talk about the <strong>average effect of substitution</strong>, which is the difference between the average effects of the two alleles, this is written as \( \alpha \).
+\[ 
+\alpha = a + d(q-p) = \alpha_1 - \alpha_2
+ \]</p>
+
+<h4>Breeding Value</h4>
+
+<table><thead>
+<tr>
+<th>Genotype</th>
+<th>Breeding Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>\( A_1A_1 \)</td>
+<td>\( 2\alpha_1 = 2q\alpha \)</td>
+</tr>
+<tr>
+<td>\( A_1A_2 \)</td>
+<td>\( \alpha_1 + \alpha_2 = (q-p)\alpha \)</td>
+</tr>
+<tr>
+<td>\( A_2A_2 \)</td>
+<td>\( 2 \alpha_2 = -2p\alpha \)</td>
+</tr>
+</tbody></table>
+
+<h2>Chapter 8 - Variance</h2>
+
+<p>\[  P = G + E \] and therefore  \[ V_P = V_G + V_E \] where \( V_P \) is the variance in the total phenotype, \( V_G \) in the variance in the contribution of the genotype to the total phenotype, and \( V_E \) is the variance of the environmental effects on the phenotype. </p>
+
+<h4>Componenets of variance</h4>
+
+<table><thead>
+<tr>
+<th>Variance Componenent</th>
+<th align="center">Symbol</th>
+<th>Value that&#39;s measured</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Phenotypic</td>
+<td align="center">\( V_P \)</td>
+<td>Phenotypic value</td>
+</tr>
+<tr>
+<td>Genotypic</td>
+<td align="center">\( V_G \)</td>
+<td>Genotypic Value</td>
+</tr>
+<tr>
+<td>Additive</td>
+<td align="center">\( V_A \)</td>
+<td>Breeding Value</td>
+</tr>
+<tr>
+<td>Dominance</td>
+<td align="center">\( V_D \)</td>
+<td>Dominance Deviation</td>
+</tr>
+<tr>
+<td>Interaction</td>
+<td align="center">\( V_I \)</td>
+<td>Interaction Deviation</td>
+</tr>
+<tr>
+<td>Environmental</td>
+<td align="center">\( V_E \)</td>
+<td>Environmental Deviation</td>
+</tr>
+</tbody></table>
+
+<h3>Heritability</h3>
+
+<p>Heritability = the relative importance of heredity in determining phenotypic values<br/>
+The ratio of \( V_G/V_P \) is the extent to which individuals phenotypes are determined by the genotypes. This is the variance in the genotypic value over the variance in the phenotypic value. Also known as <em>heritability in the broad sense</em> or <em>the degree of genetic determination</em></p>
+
+<p><em>Heritability in the narrow sense</em> (\( h^2 \)) is \( V_A/V_P \), the variance in the additive effects (Breeding Value, \( A \)), over the variance in the total phenotype. This is also known simply as <em>heritability</em>. Heritability determines the amount of resemblance between relatives. </p>
+
+<h3>Genetic components of variance</h3>
+
+<p>\[ G = A + D + I  \]
+\[ V_G = V_A + V_D + V_I \]
+Where G is the genotypic, A is the additive, D is the dominance, and I is the interaction variance. The <strong>additive variance</strong> is the variance between breeding values. </p>
+
+<p>Expressions for variance of breeding values and dominance deviations are given in ch 7 &hellip; table 7.3</p>
+
+<p>Additive variance is:
+\[  V_A = 2 p q \alpha^2 \]
+\[  V_A = 2 p q [ a + d(q - p)]^2  \]</p>
+
+<p>The variance of dominance deviations is:
+\[ V_D = (2pqd)^2  \]</p>
+
+<p>If there is no dominance (d = 0), then:
+\[ V_A = 2pqa^2  \]</p>
+
+<p>But if there is complete dominance (d=a), then:
+\[ V_A = 8pq^3a^2  \] </p>
+
+<p>If the allele frequencies are the same (p=q=0.5), then:
+\[  V_A = \frac{1}{2}a^2  \]
+\[  V_D = \frac{1}{2}d^2 \]</p>
+
+<h3>Total Genetic Variance</h3>
+
+<p>\[ V_G = V_A + V_D  \]
+\[  V_G = 2pq[a+d(q-p)]^2 + (2pqd)^2  \]</p>
+
+<h3>Multiple measurements: repeatability</h3>
+
+<p>Variance that is within an individual and arises from temporary or localized circumstances is called <em>special environmental variance</em>, or \( V_{Es} \). The environmental variance contributing to the between-individual component which is also permanent (not temporary), is the <em>general environmental variance</em>, \( V_{Eg} \). One can also calculate the ratio of the between-individual component and the total phenotypic variance:
+\[ 
+r = \frac{V_G + V_{Eg}}{V_P}
+ \]</p>
+
+<h2>Chapter 9</h2>
+
+<p>There&#39;s now a distinction between the causal components of variance, \( V \), and the observation components of variance, \( \sigma^2 \). \( V \) is the phenotypic variance due to different causes. \( \sigma^2 \) is produced by partitioning the phenotypic variance by families that individuals belong to. </p>
+
+<p>Example of ANOVA to illustrate this. Groupings of individuals into families of full sibs. ANOVA can partition the total variance into two parts, variation within groups, and variation between (among) groups. Between group component is the variance of the true means of the groups about the population mean, the within-group component is the variance of the individuals about the true mean of the group.</p>
+
+<p>Intraclass correlation coefficient:
+\[ 
+t = \frac{\sigma^2_B}{\sigma^2_B + \sigma^2_W}
+ \]
+Where \( \sigma^2_B \) is the between-group component and \( \sigma^2_W \) is the within-group component of variance. </p>
+
+<p>The regression of offspring on parents (how predictive the parents values are for offspring values):
+\[ 
+b_{OP} = \frac{cov(O,P)}{\sigma^2_P}
+ \]</p>
+
+<p>Also, in the book they derived the following equation:
+\[ 
+cov(O,P) = \frac{1}{2}V_A
+ \]
+Which states that the genetic covariance of offspring and one parent is half the genetic variance of the parents.</p>
+
+<p>The generalized covariance of any relationship is:
+\[ 
+cov = r V_A + u V_D
+ \]
+where \( r \) is the fraction of additive genetic variance, and \( u \) is the the fraction of dominance variance.</p>
+
+<p>\[ 
+r = 2 f_PQ
+ \]
+and
+\[ 
+u = f_{AC}f_{BD} + f_{AD}f_{BC}
+ \]</p>
+
+<p>\( r \) can sometimes be called the coefficient of relationship, or the theoretical correlation between relatives considered. </p>
+
+<h2>Chapter 10 - Heritability</h2>
+
+<p>(Narrow sense) Heritability, \( h^2 \) is equal to:
+\[ 
+h^2 = V_A / V_P
+ \]</p>
+
+<p>an equivalent statement is that heritability is equal to the regression of the breeding value, \( A \), on the phenotypic value, \( P \):
+\[ 
+h^2 = b_{AP}
+ \]</p>
+
+<p>an individual&#39;s estimated breeding value is the product of its phenotypic value and the heritability:
+\[ 
+A_{expected} = h^2 P
+ \]</p>
+
+<p>small populations maintained over a long number of generations have many alleles fixed, and therefore have lower \( V_P \). Compared to a larger population, the smaller pop will have a lower heritability since a lot of the phenotypic variation is due environmental variance</p>
+
+<h2>Chapter 11 - Selection</h2>
+
+<p>rate of response to selection, \( R \), is given by:
+\[ 
+R = i h^2 \sigma_P
+ \]
+Where \( i \) is the selection intensity, \( h^2 \) is the narrow sense heritability ( \( 1/2h^2 \) = regression of offspring on single parents), and \( \sigma_P \) is the phentypic standard deviation.</p>
+
+<p>Ways to improve the response:</p>
+
+<ul>
+<li>increase heritability - done by reducing environmental variation (controlling environment, multiple measurements, to a certain extent assortive matings)</li>
+<li>phenotypic standard deviation is just specifying units - can&#39;t change it</li>
+<li>increasing intensity of selection - limited by reproduction rates (can&#39;t select less for breeding than are needed to be selected for for population replacement)</li>
+</ul>
+
+<h2>Chapter 12 - Experimental results of selection </h2>
+
+<h3>Asymmetry of response</h3>
+
+<h4>Random Drift</h4>
+
+<p>Asymmetry can result from random drift, random sampling of a allele from generation to generation. If there is only one replicate per selection treatment, then one can&#39;t determine if drift is the cause for asymmetrical response to selection. Drift cannot be predicted. </p>
+
+<h4>Selection Differential</h4>
+
+<p>The selection differential may be different depending on direction of selection  </p>
+
+<ol>
+<li>Natural selection may aid / inhibit selection in one direction or the other.<br/></li>
+<li>fertility may change so that the intensity of selection that can be applied changes.<br/></li>
+<li>As the trait means change over generations, the variances associated with them might change as well, either increasing or decreasing.<br/></li>
+</ol>
+
+<h4>Inbreeding depression</h4>
+
+<p>If the populations used for selection experiments are small, then inbreeding becomes a problem. If trait selected is subject to inbreeding depression, then the mean will decrease as inbreeding occurs.</p>
+
+<h4>Maternal Effects</h4>
+
+<p>Maternal component affects measured traits. Weaning weights of rat pups, larger moms produce more milk and feed pups better, resulting in higher weight. 6 weeks post-wean growth is no dependent on maternal effects. Atributing traits to be maternally influeced changes the selection from one character, to one that the mother has. </p>
+
+<h4>Genetic Asymmetry</h4>
+
+<p>Genetic Asymmetry deals with effects of additive effects from genes at certain frequencies, and how changing their frequencies changes the amount of heritability. </p>
+
+<h4>Genes with large effects</h4>
+
+<p>Initial selection acts on genes of large effect, causing a rapid and large change in the trait of interest. But subsequent selection results in a very anemic, or no, response to selection. </p>
+
+<h4>Scalar Asymmetry</h4>
+
+<p>This arises when the genetic and environmental variances are skewed. This occurs when there are GxE interactions, such that individuals in one environment show less variability than those in a different one (good environment produces low variability, poor environment produces high variability). </p>
+
+<h4>Indirect Selection</h4>
+
+<p>The selective pressure imposed to select on one trait (e.g. body size), inadvertently selects on a different trait (e.g. activity level/speed of movement)</p>
+
+</body>
+
+</html>
+

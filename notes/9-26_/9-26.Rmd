@@ -1,0 +1,86 @@
+Quant Gen 9/26/13
+========================================================
+
+outline
+ * Effective Population size N_e
+ * Inbreeding : F
+  * populations
+  * individuals
+ * Coancestry
+ 
+----------------------------------------
+
+Quiz - 
+* know when to use certain equations
+* conceptual aspects
+
+Anwering a question from last class about the derivation of the variance of two components:
+$$ Var(X + Y) = Var(X) + 2Cov(X,Y) + Var(Y) $$ 
+
+Quiz, PS Material through today
+
+### Genetic Drift
+This the consequences of drift
+$$ \sigma_{p_t}^2 = p_0 q_0 \left[ 1 - (1- \frac{1}{2N})^t \right] $$ 
+$\sigma_{p_t}^2$ is the variance in allele frequency
+
+Sewall wright defined the effective population size : $N_e$
+The size of an idealized populaiton (adheres to assumtions, no selection, no migration, no mutation, but finite pop size), that corresponds to our actual pop of interest (focal pop), in terms of its rate of drift. For the rate of decay of heterozygosity. 
+
+$$ N_e = \left(\frac{1}{t} \sum_{i=1}^{t}\frac{1}{N_i}\right)^{-1} $$
+
+This is the harmonic mean of the population size. Harmonic means are dominated by the smaller values, incontrast to arithmetic means.
+
+....
+
+dioecious population size
+$$ N_e = \frac{4N_mN_f}{N_m+N_f} $$
+
+$N_m$ = number of males, $N_f$ = number of females
+
+One can use the effective population size for determining the variance in allele frequency. 
+
+### Inbreeding
+
+if we have a population of set size N, then each produces 2N gametes. Transmission of one generation to the next, finite number of gametes, each has a probability of 
+$$ \frac{1}{2N} = Prob \left[ \verb!two uniting gametes carry alleles that are identical by descent!   \right] = F $$
+
+Identity by descent - track back to a founder population ... AKA coefficient of inbreeding. probability of identity by descent is $F$
+
+looking at IBD accumulating during the transmission process ... 
+
+$$ F_t = \frac{1}{2N} + \left( 1 - \frac{1}{2N} F_{t-1}   \right) $$ 
+
+inbreeding accumlates over generations 
+
+
+Generalized Hardy-Weinberg set of expressions:
+
+Allele combo | Probability of that
+------------------|------------  
+$A_1A_1$  | $p^2(1-F) + pF$ | $p^2 + pqF$
+$A_1A_2$ | $2 pq(1-F) - 2pqF$ | $waa$
+$A_2A_2$ |  $q^2(1-F) + qF$ | $q^2 + pqF$
+
+As inbreeding goes on, amount of hets goes down, and amount of homs go up.
+
+
+### coefficient of inbreeding
+
+looking at example 5.1
+assuming that the founders are unrelated and not inbred.
+
+equation 
+$$ F_x = \frac{1}{2}^3 (1 = F_A) $$ 
+
+coefficient of coeancestry - relationship, property of a  pair of individuals. prob that two alleles each chosen at random from each individual is IBD.
+
+$$f_{P,Q} = F_x $$ 
+
+coeancestry between two individuals - average of coeancestry of an ind 
+$$f_{P,Q} = 1/2 \left( f_{P,A} + f_{P,C} \right) $$ 
+
+we can simplify if we assume founders are unrelated, $f_{P,C}$ is then zero
+
+
+

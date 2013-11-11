@@ -1,0 +1,56 @@
+10-17 Quant Gen
+======================================================
+
+to obtain the estimate of the additive variance, 
+$$
+\hat{V}_A = 4 * (MS_S - MS_D) / n * d  
+$$
+
+Just by sampling variation alone, if the variance is close to zero, then the sampling variation would cause the values to be negative some of the time. 
+
+Or another cause for negative values is having the wrong model of variance (not accounting for a bias)
+
+$$
+\sigma^2_S = cov(between paternal halfsibs) = 1/4 V_A \\
+\sigma^2_d = cov(between maternal halfsibs) = 1/4 V_A \\
+\sigma^2_{S*d} = cov(full sibs) -\sigma^2_S - \sigma^2_d = 1/4 V_D \\
+\sigma^2_w = within full sib families = 1/2 V_A + 3/4 V_D + V_{Eg}
+$$
+$\sigma^2_w$ is also known as the segregation variance. 
+
+
+$$
+\sigma^2_d - \sigma^2_S = V_{mat} \\
+4* \sigma^2_{S*d} = V_D
+$$
+
+
+
+
+------------------------------------------------------
+
+### Discussion of Mitchell and Shaw 1993
+
+How does controlling for environmental variance impact the heritability?
+
+
+
+How do we find whether genetic variance in a trait is masked in a natural population by environmental variance?
+
+
+
+controlling for environmental variance allows you to measure heritability.
+
+using genets (groups of identical clones) and ramets (individual clones), to find the genetic variance $V_G$. using the variation between ramtes as the enviromental variance (since if they're genetically identical, any variation they show is due to the environment), and then correcting the variation in the genets for this:
+$$
+V_G = (MS_{Genets} - MS_{Ramets|Genets}) / r 
+$$
+where $r$ is the mean number of ramets measured per genet
+
+
+
+
+
+
+
+

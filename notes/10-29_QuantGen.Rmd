@@ -1,0 +1,23 @@
+10-29 Quant Gen
+========================================================
+
+## Repeatabilitiy of response
+- attaching se to measures of heritability
+
+
+## asymmetry of response
+- upward vs downward selection could have different heritability / repsonse to selection
+
+
+## Group work, reasons for asymmetry in selection
+
+### Maternal effects
+- maternal effects can be predicted once they are known, but they must be worked with on a case by case basis. 
+- maternal effects can decrease selection responses in one direction, while not inhibiting responses in the other 
+
+Example of mice
+- selected for large litters
+- large litter resulted on mice having to share milk, reducing their adult size
+- smaller mice had smaller litters, which then resulted in a decreased response to selection
+
+

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>10-15 Quant Gen</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+<!-- MathJax scripts -->
+<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+</head>
+
+<body>
+<h1>10-15 Quant Gen</h1>
+
+<p>Tying up some lose ends&hellip;</p>
+
+<p>regression coefficient \( b \)= slope.
+\[ 
+b = \frac{Cov(X,Y)}{Var(X)}
+ \]
+That&#39;s one way of standardizing the covariance</p>
+
+<p>another way is
+\[ 
+r = \frac{cov(X,Y)}{\sqrt{Var(X)Var(Y)}}
+ \]
+where \( r \) is the correlation</p>
+
+<p>Var(X) = parents, Var(Y) = offspring, and these relate to two estimates of the phenotypic variance, \( V_P \)</p>
+
+<p>In general, the correlation is used more within generations</p>
+
+<hr/>
+
+<p>We want to understand the genetic basis of differences in traits, this is the heritability. </p>
+
+<hr/>
+
+<h3>Sib Analysis</h3>
+
+<p>Set of random sires, mated to a number of dams, selected at random. From these matings we get \( n \) offspring from each dam mated to a sire.</p>
+
+<p>\( S \) sires, \( S_1 \) up to \( S_s \), where \( s \) is the total number of sires. \( d \) is the number of dams, and \( n \) is the number of offspring from each dam</p>
+
+<p>Now we go to ANOVA. Trait that we&#39;re interested in is \( Z \)</p>
+
+<p>\[ 
+Z_{ijk} = \mu + S_i + d_{ij} + w_{ikj}
+ \]
+Where \( S_i \) is the contribution of the sire, \( d_{ij} \) is the dams contribution, and the difference of the individuals trait value with that of it&#39;s family, \( w_{ijk} \)</p>
+
+<p>Each effect has their own distribution, assumed to be normal. The variance of the distribution, respresents the variance of the <em>blank</em> effects in the population, e.g. variance of the sire distribution is the variance of the sire effects in the population. Falconer refers to this as the observational or design components of variance (design because they are inherent in the design of how the data is collected - <em>I guess</em>). </p>
+
+<p>\[ 
+V_P = V_A + V_D + V_{Eg}
+ \]
+\[ 
+V_P = \sigma^2_S + \sigma^2_d + \sigma^2_w
+ \]</p>
+
+<p>ANOVA - This is a random effects model</p>
+
+<table><thead>
+<tr>
+<th>Source</th>
+<th>Degrees of Freedom</th>
+<th>sums of Squares</th>
+<th>Mean Squares</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Sires</td>
+<td>\( S-1 \)</td>
+<td>\( \sum_{i} (Z_{i}-\bar{Z})^2 \)</td>
+<td>\( \frac{SS_s}{df_s} \)</td>
+</tr>
+<tr>
+<td>Dams</td>
+<td>\( S(d-1) \)</td>
+<td>\( \sum_{i}\sum_{j} (Z_{ij}-\bar{Z}_{i})^2 \)</td>
+<td>\( \frac{SS_d}{df_d} \)</td>
+</tr>
+<tr>
+<td>Within</td>
+<td>\( Sd(n-1) \)</td>
+<td>\( \sum_{i}\sum_{j}\sum_{k} (Z_{ijk}-\bar{Z}_{ij})^2 \)</td>
+<td>\( \frac{SS_w}{df_w} \)</td>
+</tr>
+</tbody></table>
+
+<p>There&#39;s also the concept of the expected mean squares:</p>
+
+<table><thead>
+<tr>
+<th>Source</th>
+<th>Expected Mean Squares</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Sires</td>
+<td>\( \sigma_w^2 + n\sigma_d^2 + nd\sigma_S^2 \)</td>
+</tr>
+<tr>
+<td>Dams</td>
+<td>\( \sigma_w^2 + n\sigma_d^2 \)</td>
+</tr>
+<tr>
+<td>Within</td>
+<td>\( \sigma_w^2 \)</td>
+</tr>
+</tbody></table>
+
+<p>Mean squares of ANOVA is the observed variance, where the expected mean squares contain the true variances that contribute to the offspring.</p>
+
+<p>\[ 
+\sigma^2_S = \frac{MS_S - MS_d}{nd}
+ \]</p>
+
+<p>\[ 
+\sigma^2_d = \frac{MS_d - MS_w}{n}
+ \]</p>
+
+<p>we&#39;re going to use the definition that the covariance within groups is equal to the variance among groups. </p>
+
+<p>\[ 
+\sigma^2_S = cov(PatHS) = 1/4 V_A
+ \]
+\[ 
+4\hat{\sigma}^2_S = \hat{V}_A
+ \]
+PatHS = Paternal half-sibs</p>
+
+<p>variance of dams
+\[ 
+\sigma^2_d = cov(FullSibs) - \sigma_S^2 = 1/2 V_A + 1/4 V_D - 1/4 V_A \\
+= 1/4V_A + 1/4 V_D
+ \]
+\[ 
+4(\sigma_d^2 - \sigma^2_s) = V_D
+ \]
+\[ 
+\sigma^2_w = V_P - \sigma_S^2 - \sigma_d^2 \\
+= 1/2 V_A + 3/4 V_D + V_{Eg}
+ \]</p>
+
+</body>
+
+</html>
+

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>10-8 Quant Gen</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+<!-- MathJax scripts -->
+<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+</head>
+
+<body>
+<h1>10-8 Quant Gen</h1>
+
+<ul>
+<li><p>Genetic basis of resemblance between relatives</p>
+
+<hr/>
+
+<p>Fisher- causal components of variance<br/>
+\( V_A,V_D, V_{Eg}, V_{Ec} \ldots \)</p></li>
+</ul>
+
+<p>causal componets are in contrast to observational compoentens of variance - a different way of partitioning the phenotypic variance<br/>
+How do we relate the observational to the causal?</p>
+
+<p>A lot of this relies on the covariance, the measure of the quantitative resemblence of relatives of a certain kind. The measure ofthe linear association of two varianble &ndash; trait values for a pair of individuals in our case. </p>
+
+<p>Now, we focus onthe genetic basis of resemblance - simply, the sharing of gene between relatives. The closer the relationship the more genes are shared. </p>
+
+<p>The coefficients of coacestries - the quantitative methods of measuring the sharing of genes between relatives. </p>
+
+<p>Talking bout expression 9.2<br/>
+Regression coefficient  &ndash; \( b_{OP} = 1/2 \frac{V_A}{V_P} \)
+A regression coefficient - Thinking about Galton&#39;s Peas, Y vs. X is trait in offspring vs trait in parent. Parents with higher values tended to have offspring with higher values. The slope of this line is b, the regression coefficient. 
+slope = b = Cov(Offspring, Parent) / Var(Parental)</p>
+
+<p>Cov(O,P) = &frac12; \( V_A \)</p>
+
+<p>Going deeper \( \ldots \)
+In thinking aovut the covariance of offsping and parent, Cov(O,P) = Exp[O*P] - Exp[O]Exp[P]; the covariance is equal to the expectation of the product of O and P, minus the expectation of O and expectation of P multiplied together. </p>
+
+<p>&hellip; did a lot of talk of covariance and stuff .. didn&#39;t pay attention</p>
+
+<p>Within generation pairs of individuals </p>
+
+<p>full siblings</p>
+
+<ul>
+<li>both alleles shared: \( 1/2 \times 1/2 = 1/4 \)</li>
+<li>single allele shared: \( 1/2 \)</li>
+<li>no alleles shared: \( 1/2 \times 1/2 = 1/4 \)
+On average, full sibs share a single allele at a locus. </li>
+</ul>
+
+<p>Cov(Monozygotic Twins) = Var(G) = \( V_A + V_D \)
+Cov(Dizygotic twins) = just like full sibs</p>
+
+<p>General</p>
+
+<p>Cov(any pair of individuals) = \( Cov(Z_X,Z_Y) \), Z= trait, individuals X and Y
+\[ 
+Cov(Z_X,Z_Y) = rV_A + uV_D
+ \]</p>
+
+<p>\[ 
+r = 2 f_{X,Y} //
+u = Prob(\verb!both alleles are IDB!)
+ \]</p>
+
+<p>Looking for a general expression for u, how could X and Y share a single allele at a locus?</p>
+
+<p>A X B -&gt; X ; C X D -&gt; Y</p>
+
+<p>\[ 
+u = f_{A,C}f_{B,D} + f_{A,D}f_{B,C}
+ \]</p>
+
+<p>for epistatsis
+\[  
+Cov(Z_X,Z_Y) = r^2 V_{A*A} + ru V_{A*D} + u^2 V_{D*D} + r^3 V_{A*A*A} + r^2u V_{A*A*D} \ldots u^3V_{D*D*D}
+ \]</p>
+
+</body>
+
+</html>
+

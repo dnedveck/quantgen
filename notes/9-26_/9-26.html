@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>Quant Gen 9/26/13</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+<!-- MathJax scripts -->
+<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+</head>
+
+<body>
+<h1>Quant Gen 9/26/13</h1>
+
+<p>outline</p>
+
+<ul>
+<li>Effective Population size N_e</li>
+<li>Inbreeding : F
+
+<ul>
+<li>populations</li>
+<li>individuals</li>
+</ul></li>
+<li>Coancestry</li>
+</ul>
+
+<hr/>
+
+<p>Quiz - </p>
+
+<ul>
+<li>know when to use certain equations</li>
+<li>conceptual aspects</li>
+</ul>
+
+<p>Anwering a question from last class about the derivation of the variance of two components:
+\[  Var(X + Y) = Var(X) + 2Cov(X,Y) + Var(Y)  \] </p>
+
+<p>Quiz, PS Material through today</p>
+
+<h3>Genetic Drift</h3>
+
+<p>This the consequences of drift
+\[  \sigma_{p_t}^2 = p_0 q_0 \left[ 1 - (1- \frac{1}{2N})^t \right]  \] 
+\( \sigma_{p_t}^2 \) is the variance in allele frequency</p>
+
+<p>Sewall wright defined the effective population size : \( N_e \)
+The size of an idealized populaiton (adheres to assumtions, no selection, no migration, no mutation, but finite pop size), that corresponds to our actual pop of interest (focal pop), in terms of its rate of drift. For the rate of decay of heterozygosity. </p>
+
+<p>\[  N_e = \left(\frac{1}{t} \sum_{i=1}^{t}\frac{1}{N_i}\right)^{-1}  \]</p>
+
+<p>This is the harmonic mean of the population size. Harmonic means are dominated by the smaller values, incontrast to arithmetic means.</p>
+
+<p>&hellip;.</p>
+
+<p>dioecious population size
+\[  N_e = \frac{4N_mN_f}{N_m+N_f}  \]</p>
+
+<p>\( N_m \) = number of males, \( N_f \) = number of females</p>
+
+<p>One can use the effective population size for determining the variance in allele frequency. </p>
+
+<h3>Inbreeding</h3>
+
+<p>if we have a population of set size N, then each produces 2N gametes. Transmission of one generation to the next, finite number of gametes, each has a probability of 
+\[  \frac{1}{2N} = Prob \left[ \verb!two uniting gametes carry alleles that are identical by descent!   \right] = F  \]</p>
+
+<p>Identity by descent - track back to a founder population &hellip; AKA coefficient of inbreeding. probability of identity by descent is \( F \)</p>
+
+<p>looking at IBD accumulating during the transmission process &hellip; </p>
+
+<p>\[  F_t = \frac{1}{2N} + \left( 1 - \frac{1}{2N} F_{t-1}   \right)  \] </p>
+
+<p>inbreeding accumlates over generations </p>
+
+<p>Generalized Hardy-Weinberg set of expressions:</p>
+
+<table><thead>
+<tr>
+<th>Allele combo</th>
+<th>Probability of that</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>\( A_1A_1 \)</td>
+<td>\( p^2(1-F) + pF \)</td>
+</tr>
+<tr>
+<td>\( A_1A_2 \)</td>
+<td>\( 2 pq(1-F) - 2pqF \)</td>
+</tr>
+<tr>
+<td>\( A_2A_2 \)</td>
+<td>\( q^2(1-F) + qF \)</td>
+</tr>
+</tbody></table>
+
+<p>As inbreeding goes on, amount of hets goes down, and amount of homs go up.</p>
+
+<h3>coefficient of inbreeding</h3>
+
+<p>looking at example 5.1
+assuming that the founders are unrelated and not inbred.</p>
+
+<p>equation 
+\[  F_x = \frac{1}{2}^3 (1 = F_A)  \] </p>
+
+<p>coefficient of coeancestry - relationship, property of a  pair of individuals. prob that two alleles each chosen at random from each individual is IBD.</p>
+
+<p>\[ f_{P,Q} = F_x  \] </p>
+
+<p>coeancestry between two individuals - average of coeancestry of an ind 
+\[ f_{P,Q} = 1/2 \left( f_{P,A} + f_{P,C} \right)  \] </p>
+
+<p>we can simplify if we assume founders are unrelated, \( f_{P,C} \) is then zero</p>
+
+</body>
+
+</html>
+

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>Quant Gen 9/24/13</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+<!-- MathJax scripts -->
+<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+</head>
+
+<body>
+<h1>Quant Gen 9/24/13</h1>
+
+<h3>outline for today</h3>
+
+<ul>
+<li>Finite population size </li>
+<li>Effect on genetic variation
+
+<ul>
+<li>among populaitons</li>
+<li>within populations</li>
+</ul></li>
+<li>Effective popultion size</li>
+</ul>
+
+<hr/>
+
+<p>talking about variaton due to differences in the environment<br/>
+ V_Eg - general environmental variance<br/>
+ V_Es - variation withing individuals with respect to the quantitative trait.<br/>
+ V_Ec   </p>
+
+<p>P = G + E_micro<br/>
+var(P) = var(G) + var(E) + 2cov(G,E)  </p>
+
+<p>If we assume that the covariance of the G and E is zero we can then begin to work on estimating the variance of the G. </p>
+
+<h3>GxE interaction</h3>
+
+<p>This can be shown in the classic reaction norm plot. </p>
+
+<p>GxE norm of reaction is also called the genotypic plasticity. </p>
+
+<p>No GxE, then all the genotypes have the same slope (parallel) when going from environment to environment. There is a GxE interaction when there are differeing slopes for the genotypes going from environment to environment. </p>
+
+<p>GxE involves gene expression contigent on particular environments. </p>
+
+<h3>Population Genetics</h3>
+
+<p>Relaxing the assumtion of an infinite population, therefore finite N, and drift occurs. </p>
+
+<p>This finite population size and drift is a stochastic theory/process. Probablistic approaches to determinine gene frequencies from generation to generation.</p>
+
+<p>We can&#39;t really predict the allele frequencies, but we can look at the variances of the allele frequencies. If p=1, or q=1, then the variance will be the smallest, but if p=0.5 and q=0.5, then the variance will be the highest.</p>
+
+<p>\[ 
+\sigma_p^2 = \frac{p_o q_o}{2N}
+ \] </p>
+
+<p>for those of you familiar with &hellip; this equation is the binomial distribution (or the variance for a binomial distribution? similar to?).</p>
+
+<p>Allele frequency at any time t is;
+\[ 
+\sigma_p^2 = p_o q_o [1 - (1- \frac{1}{2N})^t]
+ \]
+Using this equation, t = generations, and then as N gets larger, the quantity in parentheses gets closer to 1, and then the variance approaches 0.</p>
+
+<p>What&#39;s the effect of drift on genetic variance among populations? It increases the variance anong populations, they are becoming more and more different from each other. Divergence among the populations, but each population becomes more similar. Happens faster the smaller the population size. </p>
+
+<p>Drift also reduces genetic variation within populations. </p>
+
+<ul>
+<li>if the allele becomes fixed, then all subsequent generations will not have the other allele. After a ton of generations, we expect them to eventually fix for certain alleles. probability of fixation of a particular allele is equal to it&#39;s starting frequency.<br/></li>
+</ul>
+
+<p>genetic variance is reduced to \( 1/2 V_{g_o} \) in ~1.4N generations</p>
+
+</body>
+
+</html>
+
