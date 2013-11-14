@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>11-14 Quant Gen</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+<!-- MathJax scripts -->
+<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+</head>
+
+<body>
+<h1>11-14 Quant Gen</h1>
+
+<p>Working further with
+\[ 
+\Delta \bar{Z} = G \beta
+ \]</p>
+
+<p>\( G \) is the genetic variance covariance matrix
+\( \beta \) vector measures the direct selection</p>
+
+<p>Lande and Arnold - Multiple regression</p>
+
+<ul>
+<li>multiple predictors of fitness</li>
+<li>\( \beta \) s are the partial regression coefficient</li>
+</ul>
+
+<p>Regression equation:
+\[ 
+w = \beta_1 Z_1 + \beta_2 Z_2 + \ldots + error
+ \]</p>
+
+<p>But then there&#39;s another way to look at the change in traits
+\[ 
+\Delta \bar{Z} = Cov_A(w,Z)
+ \]</p>
+
+<h3>G X E interaction</h3>
+
+<p>genotpye by environment interaction is the nonparallelism in the reaction to different envrionments</p>
+
+<p>The different environments are &ldquo;macroenvironments&rdquo; - large enough to contain the different genotypes. environments could be </p>
+
+<h4>Example</h4>
+
+<p>fullsib nested withing halfsib crosses, grown in 2 or more different macroenvironments.
+ANOVA would analyze the variances</p>
+
+<ul>
+<li>random: sires, dames, within</li>
+<li>fixed: environment</li>
+<li>interactions: sire X environment, dam X environment<br/>
+From the interactions we could components of variance, \( \sigma^2_{s\times E} \), and this could be thought of as the breeding values responding to environmental effects. </li>
+</ul>
+
+<h2>Group discussion</h2>
+
+<ul>
+<li>environment change could be more gradual than the differences in environment
+
+<ul>
+<li>strong selection depletes genetic variation to be selected on</li>
+<li>weak selection wouldn&#39;t deplete that as much</li>
+</ul></li>
+<li>OK dry - would make the environemental differences more extreme</li>
+<li>gene migration could be a method of adaptation to changing environments
+
+<ul>
+<li>but pop fragmentation prevents this</li>
+</ul></li>
+</ul>
+
+</body>
+
+</html>
+
