@@ -1,0 +1,12 @@
+11-19 Quant Gen
+========================================================
+
+
+$\sigma^2_{SXe}\rightarrow$ G X E interaction die to the change in breeding values
+
+we have a GxE interaction any time we have a nonparallelism in the reaction norms
+ - change in rank of different Genotypes fitness in different environments
+ - or same rank, just wider differences between the groups
+ 
+one can also use $r_g$, the correlation of trait in E1, with trait in E2. Trait measured in two different environments. This is the genetic correlation between traits in different environments
+
