@@ -309,3 +309,22 @@ This arises when the genetic and environmental variances are skewed. This occurs
 The selective pressure imposed to select on one trait (e.g. body size), inadvertently selects on a different trait (e.g. activity level/speed of movement)
 
 
+Ch 19 correlated traits
+-----------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
