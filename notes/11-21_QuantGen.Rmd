@@ -1,0 +1,33 @@
+11-21 Quant Gen
+========================================================
+
+Inbreeding and change of means of a population
+
+Trait mean in inbreeding ($M_F$) - trait mean in random mating ($M_{F=0}$)
+
+Effect of inbreeding on trait mean:
+$$
+M_F - M_{F=0} \\
+a(p-q) + 2pqd - 2pqFd = M_F
+$$
+
+There is only inbreeding effects when $F > 0$ and $|d| > 0$. When there is dominance, and inbreeding. Also, $p$ or $q$ can't be zero, there has to be segregating variation at the locus.
+
+If there is no epistatsis, the effect of inbreeding is:
+$$
+- 2 F \sum_{i=1}^{nloci} p_i q_i d_i
+$$
+summing over allele freqs and dominance parameter at each loci. Each locus is weighted by the dominance parameter. One can have dominance parameters cancel each other out, in this summation expression. 
+
+Effect of inbreeding on trait means can be anything (from positive to negative). But then there's inbreeding depression: decline in trait means with inbreeding. Close inbreeding of populations tends to reduce fecundity, size, and other aspects. 
+
+directional dominance = the $d$ is mostly positive. If we see a change in the trait mean, then a lot of the $d$ terms are postive, there is a small amount of cancelling out.
+
+change in trait mean as a function of F should be linear - if there is directional dominance.
+
+Epistasis - it should only play a role if there are interactions between dominance deviations. If there is epistasis, then there is curvature in the (traitmean|F) function. Double homozygote affect increases with an $F^2$ effect.
+
+Then there is purging - selection reducing frequency of deleterious alleles, so they have much less affect on the mean. This is what can take place in selfers.
+
+As each generation goes by, $F$ increases by half as much as the previous generation. Asymptotically approaches 1. 
+
